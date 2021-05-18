@@ -1,5 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+
 const projectList = [
     {
         title: 'WebAily',
@@ -58,11 +59,11 @@ const Projects = () => {
         show:{opacity:1,y:0,transition:{duration:1}}
     }
     return(
-        <motion.div variants={variants} initial='hidden' animate='show' className='projects'>
-            <h1>Projects - more on <a rel='noopener' href='https://github.com/leszekkorzan'>GitHub</a></h1>
-            <div class='boxes projects-box'>
+        <motion.div variants={variants} initial='hidden' animate='show' className='projects cnt'>
+            <h1>Projects - more on <a className='link-text' rel='noopener' href='https://github.com/leszekkorzan'>GitHub</a></h1>
+            <div className='boxes projects-box'>
                 {projectList.map(i=>
-                    <motion.a variants={item} target='_blank' rel='noopener' href={i.url}><div class='box'><h1>{i.title}</h1><p>{i.description}</p></div></motion.a>
+                    <motion.a key={i.url} variants={item} target='_blank' rel='noopener' href={i.url}><div className='box'><h1>{i.title}</h1><p>{i.description}</p></div></motion.a>
                 )}
             </div>
         </motion.div>

@@ -26,13 +26,17 @@ const Menu = () =>{
     const [showMenu, setShowMenu] = useState('')
     const variants = {
         hidden: { y: 0, opacity: 0, transitionEnd: {display: 'none'}},
-        visible: { display: 'block', y: 50, opacity: 1},
+        visible: { display: 'block', y: 50, opacity: 1, transition: {delay: 0.4}},
     }
     const toggleMenu = () =>{
         if(btnClass === 'active'){
             setBtnClass('not-active');
-            setShowMenu('hidden')
+            setShowMenu('hidden');
+            setTimeout(()=>{
+                document.querySelector('.cnt').classList.remove('hide')
+            }, 400)
         }else{
+            document.querySelector('.cnt').classList.add('hide')
             setShowMenu('visible')
             setBtnClass('active');
         }
@@ -52,8 +56,8 @@ const Menu = () =>{
             </div>
             <motion.div transition={{duration:0.3}} animate={showMenu} variants={variants} className='menu-nav'>
                 {menuList.map(i =>
-                    <div onClick={()=>btnClass==='active'&&toggleMenu()}  className='menu-el' key={i.path}>
-                        <Link to={i.path}>{i.title}</Link>
+                    <div onClick={()=>btnClass==='active'&&toggleMenu()} className='menu-el' key={i.path}>
+                        <Link className='menu-link' to={i.path}>{i.title}</Link>
                     </div>
                 )}
             </motion.div>
