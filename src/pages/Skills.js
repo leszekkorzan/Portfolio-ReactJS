@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 
 import { FaHtml5, FaCss3, FaJs, FaPhp, FaPython, FaReact, FaVuejs, FaGitAlt, FaFigma, FaNode, FaGoogle, FaAws, FaServer } from "react-icons/fa";
@@ -20,6 +20,9 @@ const Skills = () => {
         hidden:{opacity:0,y:50},
         show:{opacity:1,y:0,transition:{duration:0.2}}
     }
+    useEffect(() => {
+        document.title = 'Leszekk.eu | skills'
+    }, []);
     return(
         <motion.div className='skills cnt' variants={variants} initial='hidden' animate='show'>
             <h1>I'm focused on front-end technologies.</h1>

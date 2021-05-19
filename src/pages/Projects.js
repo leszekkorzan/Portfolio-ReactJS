@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 
 const projectList = [
@@ -58,6 +58,9 @@ const Projects = () => {
         hidden:{opacity:0,y:80},
         show:{opacity:1,y:0,transition:{duration:1}}
     }
+    useEffect(() => {
+        document.title = 'Leszekk.eu | projects'
+    }, []);
     return(
         <motion.div variants={variants} initial='hidden' animate='show' className='projects cnt'>
             <h1>Projects - more on <a className='link-text' rel='noopener' href='https://github.com/leszekkorzan'>GitHub</a></h1>

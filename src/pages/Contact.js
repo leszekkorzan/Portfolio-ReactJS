@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion'
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 
@@ -17,6 +17,9 @@ const Contact = () => {
         hidden:{opacity:0,y:80},
         show:{opacity:1,y:0,transition:{duration:1}}
     }
+    useEffect(() => {
+        document.title = 'Leszekk.eu | contact'
+    }, []);
     return(
         <motion.div variants={variants} initial='hidden' animate='show' className="contact cnt">
             <h1>Contact via email is the best option - <a className='link-text' href='mailto:leszekk@leszekk.eu'>leszekk@leszekk.eu</a></h1>

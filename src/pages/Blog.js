@@ -20,27 +20,27 @@ const Blog = () => {
     }
     const [response, setResponse] = useState([])
     useEffect(() => {
+        document.title = 'Leszekk.eu | blog'
         window.fetch('https://cms.leszekk.eu/api/articles.php/?website=Leszekk.eu')
         .then(res => res.json())
         .then(data => setResponse(data))
-        .catch(err => window.alert("Przepraszamy, wystąpił błąd podczas ładowania treści."))
+        .catch(err => window.alert("Sorry, error. Try again later."))
     }, []);
     return(
         <>
             <motion.div variants={variants} initial='hidden' animate='show' className='blog cnt'>
-                <motion.h1 variants={item} className='home-h1'>Blog</motion.h1>
-                {response.length && response.success == undefined ? (
+                <h1 className='home-h1'>Blog</h1>
+                {response.length && response.success === undefined ? (
                     <div className='boxes'>
-                        {response.map(obj => 
-                            <Link key={obj.id} to={`/blog/${obj.id}`}><div className='box blog-box'><h1>{obj.title}</h1><p>{obj.time}</p></div></Link>
+                        {response.map(obj =>
+                            <Link key={obj.id} to={`/blog/${obj.id}`}><motion.div variants={item} className='box blog-box'><h1>{obj.title}</h1><p>{obj.time}</p></motion.div></Link>
                         )}
                     </div>
-   
                 ) : (
-                    <div>ladowanie</div>
+                    <h2>Loading...</h2>
                 )}
-                {response.success == false &&
-                    <h2>Wystąpił błąd!</h2>
+                {response.success === false &&
+                    <h2>No content.</h2>
                 }
             </motion.div>
         </>

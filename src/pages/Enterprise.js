@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion'
 import { DiGoogleAnalytics, DiTerminal, DiDatabase } from "react-icons/di";
 
@@ -18,6 +18,9 @@ const Enterprise = () => {
         hidden:{opacity:0,y:80},
         show:{opacity:1,y:0,transition:{duration:1}}
     }
+    useEffect(() => {
+        document.title = 'Leszekk.eu | enterprise'
+    }, []);
     return(
         <motion.div variants={variants} initial='hidden' animate='show' className="enterprise cnt">
             <h1>Korzan Dev Enterprise</h1>

@@ -24,7 +24,7 @@ const BlogPost = ({match}) => {
         window.fetch(`https://cms.leszekk.eu/api/article.php/?id=${id}`)
         .then(res => res.json())
         .then(data => {
-            if(data.category == 'Leszekk.eu'){
+            if(data.category === 'Leszekk.eu'){
                 setResponse(data)
                 setIsLoading(false);
             }else{
@@ -38,6 +38,7 @@ const BlogPost = ({match}) => {
         })
     }
     useEffect(() => {
+        document.title = 'Leszekk.eu | blog'
         if(id){
             getContent();
         }
@@ -52,6 +53,7 @@ const BlogPost = ({match}) => {
                             <div dangerouslySetInnerHTML={{__html: response.content}} className='content'></div>
                             <hr></hr>
                             <p>Updated {response.time}</p>
+                            <p>Source: {response.category}</p>
                         </div>
                     </>
                 ): (
