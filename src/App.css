@@ -557,3 +557,11 @@ span + span {
   background-image: linear-gradient(147deg, #FFE53B, #FF2525 90%);  
   transition: 0.3s;
 }
+.blog-box{
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+.dialog-box h1{
+  word-wrap: break-word;
+}

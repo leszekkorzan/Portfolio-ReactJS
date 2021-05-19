@@ -50,7 +50,7 @@ const Skills = () => {
                         <motion.span variants={item} className='skill'><DiVisualstudio/> VS Code</motion.span>
                         <motion.span variants={item} className='skill'><FaGitAlt/> Git</motion.span>
                         <motion.span variants={item} className='skill'>npm & yarn</motion.span>
-                        <motion.span variants={item} className='skill'>Postman</motion.span>
+                        <motion.span variants={item} className='skill'>Insomnia</motion.span>
                         <motion.span variants={item} className='skill'><FaFigma/> Figma</motion.span>
                         <motion.span variants={item} className='skill'><DiPhotoshop/> Photoshop</motion.span>
                     </div>

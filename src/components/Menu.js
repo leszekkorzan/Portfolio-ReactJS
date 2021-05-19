@@ -19,6 +19,10 @@ const menuList = [
     {
         title: 'Enterprise',
         path: '/enterprise'
+    },
+    {
+        title: 'Blog',
+        path: '/blog'
     }
 ]
 const Menu = () =>{

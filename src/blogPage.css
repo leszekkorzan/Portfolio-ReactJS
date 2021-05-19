@@ -1,0 +1,29 @@
+.content{
+    padding: 20px;
+}
+.content p{
+    font-size: 20px;
+}
+.content .image{
+    text-align: center;
+}
+.content .image-style-align-right{
+    text-align: right;
+}
+.content .image-style-align-left{
+    text-align: left;
+}
+.content img{
+    max-width: 100%;
+    height: auto;
+}
+.content table{
+    width: 95%;
+    border: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blogPostContent{
+    max-width: 800px;
+    margin-right: auto;
+}

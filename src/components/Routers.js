@@ -10,7 +10,8 @@ import Skills from '../pages/Skills';
 import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
 import Enterprise from '../pages/Enterprise';
-
+import Blog from '../pages/Blog';
+import BlogPost from '../pages/BlogPost';
 const Routers = () =>{
     return(
         <Router>
@@ -28,6 +29,12 @@ const Routers = () =>{
                     </Route>
                     <Route path='/skills'>
                         <Skills/>
+                    </Route>
+                    <Route path='/blog/:id'>
+                        <BlogPost/>
+                    </Route>
+                    <Route path='/blog'>
+                        <Blog/>
                     </Route>
                     <Route path='/'>
                         <Home/>
