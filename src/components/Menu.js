@@ -18,7 +18,7 @@ const menuList = [
     },
     {
         title: 'Enterprise',
-        path: '/enterprise'
+        path: '/webaily'
     },
     {
         title: 'Blog',

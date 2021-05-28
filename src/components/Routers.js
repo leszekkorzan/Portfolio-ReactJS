@@ -18,7 +18,7 @@ const Routers = () =>{
             <div className='container'>
                 <Menu/>
                 <Switch>
-                    <Route path='/enterprise'>
+                    <Route path='/webaily'>
                         <Enterprise/>
                     </Route>
                     <Route path='/contact'>
@@ -30,7 +30,7 @@ const Routers = () =>{
                     <Route path='/skills'>
                         <Skills/>
                     </Route>
-                    <Route path='/blog/:id'>
+                    <Route path='/post/:id'>
                         <BlogPost/>
                     </Route>
                     <Route path='/blog'>
@@ -41,7 +41,6 @@ const Routers = () =>{
                     </Route>
                 </Switch> 
             </div>
-
         </Router>
     )
 }

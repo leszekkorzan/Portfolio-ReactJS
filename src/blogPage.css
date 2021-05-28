@@ -1,5 +1,9 @@
 .content{
     padding: 20px;
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    border: 10px solid #fa4029;
 }
 .content p{
     font-size: 20px;
@@ -26,4 +30,8 @@
 .blogPostContent{
     max-width: 800px;
     margin-right: auto;
+}
+.content a{
+    text-decoration: underline;
+    color: #648dec;
 }

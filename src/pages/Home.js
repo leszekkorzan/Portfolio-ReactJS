@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import logo from '../img/logo.svg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -19,6 +19,9 @@ const Home = () => {
         hidden:{opacity:0,y:80},
         show:{opacity:1,y:0,transition:{duration:1}}
     }
+    useEffect(() => {
+        document.title = 'Leszekk.eu'
+    }, []);
     return(
         <>
             <div className='animated-border'>

@@ -33,7 +33,7 @@ const Blog = () => {
                 {response.length && response.success === undefined ? (
                     <div className='boxes'>
                         {response.map(obj =>
-                            <Link key={obj.id} to={`/blog/${obj.id}`}><motion.div variants={item} className='box blog-box'><h1>{obj.title}</h1><p>{obj.time}</p></motion.div></Link>
+                            <Link key={obj.id} to={`/post/${obj.id}`}><motion.div variants={item} className='box blog-box'><h1>{obj.title}</h1><p>updated {obj.time}</p></motion.div></Link>
                         )}
                     </div>
                 ) : (

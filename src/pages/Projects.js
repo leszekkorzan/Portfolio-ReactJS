@@ -5,7 +5,7 @@ const projectList = [
     {
         title: 'WebAily',
         description: 'Quickly and easily shorten the url. API also available and extension for Visual Studio Code.',
-        url: 'https://webaily.web.app/'
+        url: 'https://webaily.web.app/short-url'
     },
     {
         title: 'Code Leszno',
@@ -30,12 +30,12 @@ const projectList = [
     {
         title: 'DSC Servers',
         description: 'With this application you can create your own Discord invitation with a friendly url!',
-        url: 'https://leszekk.eu/dsc/'
+        url: 'https://app.leszekk.eu/dsc/'
     },
     {
         title: 'Pass Upgrader',
         description: 'Password Upgrader allows you to improve the security of your password without giving up easy and liked words.',
-        url: 'https://leszekk.eu/pass-upgrader/'
+        url: 'https://app.leszekk.eu/pass-upgrader/'
     },
     {
         title: 'Car Stats',
