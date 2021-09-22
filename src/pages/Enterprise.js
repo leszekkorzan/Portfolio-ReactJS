@@ -47,7 +47,11 @@ const Enterprise = () => {
                 <br></br>
                 <h2>Resources:</h2>
                 <motion.a variants={item} href='https://mail.leszekk.eu/' className='link-enterprise'>Webmail</motion.a>
-                <motion.a variants={item} target='_blank' href='https://cms.leszekk.eu/forms/?id=Leszekk.eu' className='link-enterprise'>Contact Form</motion.a>
+                <motion.a variants={item} target='_blank' href='https://cms.leszekk.eu/forms/?id=Leszekk.eu' className='link-enterprise'>Contact</motion.a>
+                <br></br>
+                <br></br>
+                <br></br>
+                <motion.a variants={item} href='/post/110' className='link-enterprise'>Share</motion.a>
                 <br></br>
                 <p className='copyright2'>2021 &copy; Webaily</p>
             </motion.div>

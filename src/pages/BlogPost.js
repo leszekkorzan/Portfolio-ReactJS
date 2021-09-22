@@ -21,7 +21,7 @@ const BlogPost = ({match}) => {
     const [error, setError] = useState(false);
     const getContent = () => {
         setIsLoading(true);
-        window.fetch(`https://cms.leszekk.eu/api/article.php/?id=${id}`)
+        window.fetch(`https://cms.webaily.com/api/article.php/?id=${id}`)
         .then(res => res.json())
         .then(data => {
             if(data.category === 'Leszekk.eu' || data.category === 'Webaily'){

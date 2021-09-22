@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 
 const projectList = [
     {
-        title: 'WebAily',
-        description: 'Quickly and easily shorten the url. API also available and extension for Visual Studio Code.',
-        url: 'https://webaily.web.app/short-url'
+        title: 'Dassi Finance',
+        description: 'I developed marketing website of world\'s first zero interest blockchain based micro-lending platform.',
+        url: 'https://dassi.finance/'
     },
     {
         title: 'Code Leszno',
@@ -13,9 +14,14 @@ const projectList = [
         url: 'https://code.leszno.eu/'
     },
     {
+        title: 'WebAily Short',
+        description: 'Quickly and easily shorten the url. API also available and extension for Visual Studio Code.',
+        url: 'https://webaily.web.app/short-url'
+    },
+    {
         title: 'L-CMS',
         description: 'PHP based post publishing system.',
-        url: 'https://cms.leszekk.eu/'
+        url: 'https://cms.webaily.com/'
     },
     {
         title: 'Web Devs',
@@ -66,7 +72,7 @@ const Projects = () => {
             <h1>Projects - more on <a className='link-text' rel='noopener' href='https://github.com/leszekkorzan'>GitHub</a></h1>
             <div className='boxes projects-box'>
                 {projectList.map(i=>
-                    <motion.a key={i.url} variants={item} target='_blank' rel='noopener' href={i.url}><div className='box'><h1>{i.title}</h1><p>{i.description}</p></div></motion.a>
+                    <motion.a key={i.url} variants={item} target='_blank' rel='noopener' href={i.url}><Tilt className='box project-box' scale={1.06} transitionSpeed={3000} tiltMaxAngleX={11} tiltMaxAngleY={11}><h1>{i.title}</h1><p>{i.description}</p></Tilt></motion.a>
                 )}
             </div>
         </motion.div>

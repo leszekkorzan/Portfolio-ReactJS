@@ -3,6 +3,7 @@ import logo from '../img/logo.svg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub } from "react-icons/fa";
+import Tilt from 'react-parallax-tilt'
 
 const Home = () => {
     const variants = {
@@ -25,11 +26,14 @@ const Home = () => {
     return(
         <>
             <div className='animated-border'>
-                <div className='animated-border-in'>
-                    <span>
-                        <img alt='L' className='logo-a-img' src={logo}/>
-                    </span>
-                </div>
+                <Tilt scale={1.1} transitionSpeed={4000} tiltMaxAngleX={15} tiltMaxAngleY={15}>
+                    <div className='animated-border-in'>
+                        <span>
+                            <img alt='L' className='logo-a-img' src={logo}/>
+                        </span>
+                    </div>   
+                </Tilt>
+
             </div>
             <motion.div initial={{opacity:0}} animate={{opacity:1}} className='animated-border-mobile'>
                 <div className='animated-border-mobile-in'></div>
@@ -39,7 +43,7 @@ const Home = () => {
             </motion.div>
             <motion.div variants={variants} initial='hidden' animate='show' className='home cnt'>
                 <motion.h1 variants={item} className='home-h1'>Hello, I'm <motion.b animate={{color: '#ff4028', transition: {delay: 1.5}}} className='nameTitle'>Leszek Korzan</motion.b></motion.h1>
-                <motion.h3 variants={item} className='h3'>Front-End Development is my passion.</motion.h3>
+                <motion.h3 variants={item} className='h3'>Web Development is my passion.</motion.h3>
                 <motion.div variants={item}>
                     <button className='black-btn showcontact'>
                         <Link className='white-a' to='/contact'>Contact</Link>

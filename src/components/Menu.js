@@ -17,7 +17,7 @@ const menuList = [
         path: '/contact'
     },
     {
-        title: 'Enterprise',
+        title: 'Webaily',
         path: '/webaily'
     },
     {

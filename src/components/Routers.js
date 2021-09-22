@@ -2,14 +2,13 @@ import React from 'react';
 import {
     BrowserRouter as Router,
     Switch,
-    Route
+    Route,
 } from 'react-router-dom';
 import Menu from './Menu';
 import Home from '../pages/Home';
 import Skills from '../pages/Skills';
 import Contact from '../pages/Contact';
 import Projects from '../pages/Projects';
-import Enterprise from '../pages/Enterprise';
 import Blog from '../pages/Blog';
 import BlogPost from '../pages/BlogPost';
 const Routers = () =>{
@@ -18,9 +17,6 @@ const Routers = () =>{
             <div className='container'>
                 <Menu/>
                 <Switch>
-                    <Route path='/webaily'>
-                        <Enterprise/>
-                    </Route>
                     <Route path='/contact'>
                         <Contact/>
                     </Route>
@@ -36,6 +32,7 @@ const Routers = () =>{
                     <Route path='/blog'>
                         <Blog/>
                     </Route>
+                    <Route path='/webaily' component={()=>window.location.href = 'https://www.webaily.com'}/>
                     <Route path='/'>
                         <Home/>
                     </Route>

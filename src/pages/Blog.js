@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import Tilt from 'react-parallax-tilt';
 
 const Blog = () => {
     const variants = {
@@ -21,7 +21,7 @@ const Blog = () => {
     const [response, setResponse] = useState([])
     useEffect(() => {
         document.title = 'Leszekk.eu | blog'
-        window.fetch('https://cms.leszekk.eu/api/articles.php/?website=Leszekk.eu')
+        window.fetch('https://cms.webaily.com/api/articles.php/?website=Leszekk.eu')
         .then(res => res.json())
         .then(data => setResponse(data))
         .catch(err => window.alert("Sorry, error. Try again later."))
@@ -33,7 +33,7 @@ const Blog = () => {
                 {response.length && response.success === undefined ? (
                     <div className='boxes'>
                         {response.map(obj =>
-                            <Link key={obj.id} to={`/post/${obj.id}`}><motion.div variants={item} className='box blog-box'><h1>{obj.title}</h1><p>updated {obj.time}</p></motion.div></Link>
+                            <Link key={obj.id} to={`/post/${obj.id}`}><motion.div variants={item}><Tilt className='box blog-box' scale={1.1} transitionSpeed={3000} tiltMaxAngleX={11} tiltMaxAngleY={11}><h1>{obj.title}</h1><p>updated {obj.time}</p></Tilt></motion.div></Link>
                         )}
                     </div>
                 ) : (
